@@ -1,0 +1,53 @@
+@import "_vars";
+@import "_fonts";
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &+* {
+    margin-top: 2rem;
+  }
+}
+
+body {
+  font-family: "Kefa", sans-serif;
+  color: $text;
+  background-color: $bg;
+  padding: 1rem 5vw;
+
+  @media screen and (min-width: $bp) {
+    padding: 1rem 15vw;
+  }
+}
+
+h1 {
+  font-family: "Ahsing";
+  font-size: 5rem;
+  line-height: 1;
+
+  @media screen and (min-width: $bp) {
+    font-size: 10rem;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+
+  @media screen and (min-width: $bp) {
+    max-width: 70%;
+    font-size: 2rem;
+  }
+}
+
+iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 75vh;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}

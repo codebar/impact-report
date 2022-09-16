@@ -22,14 +22,8 @@ body {
   }
 }
 
-h1 {
-  font-family: "Ahsing";
-  font-size: 5rem;
-  line-height: 1;
-
-  @media screen and (min-width: $bp) {
-    font-size: 10rem;
-  }
+img {
+  width: 100%;
 }
 
 p {
@@ -50,4 +44,13 @@ iframe {
 footer {
   margin-top: 4rem;
   font-size: 0.9rem;
+}
+
+a {
+  color: lighten($text, 30);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

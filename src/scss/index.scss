@@ -48,6 +48,11 @@
   &--inverted {
     color: $bg;
     background: $text;
+
+    .box--dark {
+      background: $bg;
+      color: $text;
+    }
   }
 }
 
@@ -62,7 +67,13 @@
     padding: 4rem;
     font-size: 1.8rem;
   }
+
+  &--dark {
+    background: $text;
+  }
 }
+
+
 
 .pull-right {
   @media screen and (min-width: $bp) {
@@ -74,20 +85,65 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 
-  img {
+  @media screen and (min-width: $bp) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h img {
     object-fit: contain;
     width: 100%;
-    height: 500px;
+    // height: 500px;
   }
 
   &--three-cols {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     img {
       height: 230px;
     }
   }
+}
+
+.chart {
+  text-align: center;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  img {
+    margin-top: 1rem
+  }
+}
+
+.overlappy {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: $bp) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    margin: auto;
+  }
+}
+
+.ring {
+  border: 45px solid $red ;
+  border-radius: 100%;
+  padding: 2rem;
+  height: 320px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

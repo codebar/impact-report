@@ -216,15 +216,18 @@
       padding: 2rem;
       font-size: 1.5rem;
     }
+
   }
 
-  &--neon {
+  &--four-cols {
     @media screen and (min-width: $bp) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+  }
 
+  &--neon {
     li {
-      border: 3px solid $neon-blue;
+      border: 4px solid $neon-blue;
 
       &:nth-child(2) {
         border-color: $red;
@@ -232,6 +235,10 @@
 
       &:nth-child(3) {
         border-color: $bg;
+      }
+
+      &:last-child {
+        border-color: $neon-blue;
       }
     }
   }
@@ -257,4 +264,8 @@
   a {
     color: transparentize($bg, 0.5);
   }
+}
+
+.centred-text {
+  text-align: center;
 }

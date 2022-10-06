@@ -37,12 +37,12 @@
 }
 
 .contained {
-  padding: 1rem 5vw;
+  padding: 2rem 5vw;
   color: $text;
   background-color: $bg;
 
   @media screen and (min-width: $bp) {
-    padding: 2rem 15vw;
+    padding: 3rem 15vw;
   }
 
   &--inverted {
@@ -53,6 +53,10 @@
       background: $bg;
       color: $text;
     }
+  }
+
+  *:first-child {
+    margin-top: 0;
   }
 }
 
@@ -70,28 +74,40 @@
 
   &--dark {
     background: $text;
+    font-size: 1.5rem;
+    padding: 3.5rem;
+  }
+
+  p+p {
+    margin-top: 1rem;
   }
 }
 
+.margin-top {
+  margin-top: 1rem;
+}
 
 
 .pull-right {
+  margin-top: 1rem;
+
   @media screen and (min-width: $bp) {
     float: right;
     max-width: 50%;
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 }
 
 .gallery {
   display: grid;
   gap: 2rem;
+  align-items: center;
 
   @media screen and (min-width: $bp) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  h img {
+  img {
     object-fit: contain;
     width: 100%;
     // height: 500px;
@@ -99,6 +115,17 @@
 
   &--three-cols {
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--three-cols-desktop-only {
 
     @media screen and (min-width: $bp) {
       grid-template-columns: repeat(3, 1fr);
@@ -120,20 +147,23 @@
   img {
     margin-top: 1rem
   }
-}
 
-.overlappy {
-  display: grid;
-  gap: 2rem;
-  text-align: center;
+  dl {
+    max-width: 250px;
+    margin: 0 auto;
 
-  @media screen and (min-width: $bp) {
-    grid-template-columns: repeat(3, 1fr);
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
-  img {
-    margin: auto;
+  dd {
+    margin-left: 0;
   }
+
+
 }
 
 .ring {
@@ -146,4 +176,85 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: $bp) {
+    float: right;
+    margin-left: 2rem;
+  }
+}
+
+.neon-blue {
+  color: #92FFF8;
+  font-family: "Alfa Slab One";
+}
+
+.box-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  padding-left: 0;
+  margin-top: 2rem;
+
+  @media screen and (min-width: $bp) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  li {
+    background: $text;
+    padding: 2rem;
+    border-radius: 50px;
+    color: $bg;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @media screen and (min-width: $bp) {
+      padding: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &--neon {
+    @media screen and (min-width: $bp) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    li {
+      border: 3px solid $neon-blue;
+
+      &:nth-child(2) {
+        border-color: $red;
+      }
+
+      &:nth-child(3) {
+        border-color: $bg;
+      }
+    }
+  }
+}
+
+.sign-off {
+  font-family: "Ahsing";
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+
+  @media screen and (min-width: $bp) {
+    font-size: 12rem;
+  }
+}
+
+.download-link {
+
+  text-align: center;
+  margin-top: 0;
+
+  a {
+    color: transparentize($bg, 0.5);
+  }
 }

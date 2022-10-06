@@ -69,3 +69,29 @@ h3 {
     margin-top: 4rem;
   }
 }
+
+blockquote {
+  margin-left: 0;
+  font-size: 1.6rem;
+  display: grid;
+
+
+  align-items: center;
+
+
+  @media screen and (min-width: $bp) {
+    font-size: 1.8rem;
+    grid-template-columns: 300px auto;
+    gap: 3rem;
+  }
+
+  q {}
+
+  cite {
+    display: block;
+    margin-top: .5rem;
+    // font-weight: ;
+    font-style: normal;
+    font-family: "Alfa Slab One";
+  }
+}

@@ -269,3 +269,59 @@
 .centred-text {
   text-align: center;
 }
+
+.tag-list {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: inline-block;
+    border: 3px solid $neon-blue;
+    border-radius: 5px;
+    margin-right: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &--solid-blue li {
+    background: $dark-blue;
+    color: $bg;
+    border: none;
+  }
+
+  &--solid-red li {
+    background: $red;
+    color: $bg;
+    border: none;
+  }
+
+  &--multicolour li {
+    &:nth-child(4n) {
+      border-color: $neon-blue;
+    }
+
+    &:nth-child(4n+1) {
+      border-color: $neon-green;
+    }
+
+    &:nth-child(4n+2) {
+      border-color: $neon-red;
+    }
+
+    &:nth-child(4n+3) {
+      border-color: $neon-yellow;
+    }
+  }
+}

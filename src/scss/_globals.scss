@@ -75,7 +75,6 @@ blockquote {
   font-size: 1.6rem;
   display: grid;
 
-
   align-items: center;
 
 
@@ -83,6 +82,20 @@ blockquote {
     font-size: 1.8rem;
     grid-template-columns: 300px auto;
     gap: 3rem;
+  }
+
+  &:nth-child(even) {
+    grid-template-columns: auto 300px;
+
+    img {
+      grid-column: 2/3;
+    }
+
+    q {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: right;
+    }
   }
 
   q {}
@@ -94,4 +107,9 @@ blockquote {
     font-style: normal;
     font-family: "Alfa Slab One";
   }
+}
+
+h3+blockquote,
+blockquote+blockquote {
+  margin-top: 3rem
 }

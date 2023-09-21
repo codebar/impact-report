@@ -87,6 +87,9 @@
   margin-top: 1rem;
 }
 
+.margin-top-double {
+  margin-top: 2rem;
+}
 
 .pull-right {
   margin-top: 1rem;
@@ -95,6 +98,18 @@
     float: right;
     max-width: 50%;
     margin-left: 2rem;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    padding: 30px;
+  }
+  img {
+    height: 80px;
   }
 }
 
@@ -129,6 +144,29 @@
 
     @media screen and (min-width: $bp) {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--four-cols {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--four-cols-desktop-only {
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(4, 1fr);
     }
 
     img {
@@ -293,6 +331,12 @@
     padding: 0.5rem 0.75rem;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+
+    a {
+      color: white;
+    } 
+
+
   }
 
   &--solid-blue li {

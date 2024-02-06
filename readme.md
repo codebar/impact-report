@@ -1,4 +1,4 @@
-# codebar 2022 impact report
+# codebar impact report
 
 simple static website made with parcel.
 

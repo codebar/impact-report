@@ -2,6 +2,20 @@
 @import "_fonts";
 @import "_globals";
 
+.tiny-text {
+  font-size: 0.75rem;
+}
+
+
+.medium-text {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: $bp) {
+    font-size: 1.25rem;
+  }
+}
+
 .big-text {
   font-size: 1.25rem;
   margin-top: 2rem;
@@ -26,6 +40,14 @@
   }
 }
 
+.pink-font {
+  color: $codebar-pink;
+}
+
+.blue-font {
+  color: $codebar-blue;
+}
+
 .drop-cap::first-letter {
   initial-letter: 2;
 
@@ -34,6 +56,26 @@
   line-height: 60px;
   padding-top: 9px;
   padding-right: 8px;
+}
+
+.bg-pink {
+  background-color: $codebar-pink;
+  padding: 2rem 5vw;
+  color: #fff;
+  text-align: center;
+
+  @media screen and (min-width: $bp) {
+    padding: 3rem 15vw;
+  }
+}
+
+.bg-blue {
+  background-color: $codebar-blue;
+  padding: 2rem 5vw;
+
+  @media screen and (min-width: $bp) {
+    padding: 3rem 15vw;
+  }
 }
 
 .contained {
@@ -61,7 +103,7 @@
 }
 
 .box {
-  background: $blue2;
+  background: $text;
   padding: 2rem;
   border-radius: 50px;
   color: $bg;
@@ -89,6 +131,10 @@
 
 .margin-top-double {
   margin-top: 2rem;
+}
+
+.margin-top-triple {
+  margin-top: 3rem;
 }
 
 .pull-right {
@@ -239,6 +285,14 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .pink-bg {
+    background-color: $codebar-pink;
+  }
+
+  .blue-bg {
+    background-color: $codebar-blue;
+  }
+
   li {
     background: $text;
     padding: 2rem;
@@ -332,6 +386,10 @@
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 
+    .pink-font {
+      color: $codebar-pink;
+    }
+
     a {
       color: white;
     } 
@@ -349,6 +407,10 @@
     background: $red;
     color: $bg;
     border: none;
+  }
+
+  &--white li {
+    border-color: #fff;
   }
 
   &--multicolour li {
@@ -382,4 +444,79 @@ ul {
       transform: scale(1.3);
     }
   }
+}
+
+.sponsored-by-box {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 10px 10px 20px;
+
+  img {
+    width: 40px;
+    margin-left: 5px;
+  }
+
+}
+
+.white-country-border {
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.stat-box-outer {
+  display: grid;
+  gap: 2rem;
+}
+
+.stat-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.stat-box-pink {
+  background-color: $codebar-pink;
+  color: #fff;
+}
+
+.stat-box-green {
+  background-color: $codebar-green;
+}
+
+.stat-box-blue {
+  background-color: $codebar-blue;
+}
+
+.stat-box-dark-blue {
+  background-color: $text;
+  color: #fff;
+}
+
+.sponsor-grid {
+  display: flex;
+  justify-content: space-around;
+  img {
+    max-width: 225px;
+  }
+}
+
+.codebar-stories-grid {
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 100%;
+    width: 225px;
+    height: 225px;
+  }
+}
+
+.white-link {
+  color: #fff;
 }

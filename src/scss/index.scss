@@ -488,6 +488,7 @@ ul {
 
 .stat-box-green {
   background-color: $codebar-green;
+  color: $text;
 }
 
 .stat-box-blue {
@@ -502,6 +503,7 @@ ul {
 .sponsor-grid {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   img {
     max-width: 225px;
   }

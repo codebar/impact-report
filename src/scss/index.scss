@@ -155,7 +155,8 @@
     padding: 30px;
   }
   img {
-    height: 80px;
+    max-height: 80px;
+    max-width: 300px;
   }
 }
 
@@ -455,7 +456,7 @@ ul {
   padding: 10px 10px 10px 20px;
 
   img {
-    width: 40px;
+    width: 50px;
     margin-left: 5px;
   }
 

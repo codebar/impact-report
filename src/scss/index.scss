@@ -220,6 +220,29 @@
       height: 230px;
     }
   }
+
+  &--four-cols {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--five-cols {
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
 }
 
 .chart {

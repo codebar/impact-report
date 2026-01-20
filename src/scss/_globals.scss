@@ -25,12 +25,20 @@ footer {
   padding-top: 4rem;
   font-size: 0.9rem;
   padding: 3rem 15vw 1rem 15vw;
+  text-align: center;
 
   ol {
     padding-left: 1rem;
     margin-top: 1.5rem;
     margin-bottom: .5rem;
   }
+
+  .sponsored-by-box {
+    display: inline-flex;
+    .medium-text {
+      margin-top: 0;
+    }
+  } 
 }
 
 a {

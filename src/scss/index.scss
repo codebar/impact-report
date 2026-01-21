@@ -148,16 +148,23 @@
 }
 
 .logos {
-  display: flex;
+  display: inline;
   align-items: center;
-  justify-content: center;
-  li {
-    padding: 30px;
+  justify-content: space-around;
+  text-align: center;
+
+  @media screen and (min-width: $bp) {
+    display: flex;
   }
+
   img {
-    max-height: 80px;
-    max-width: 300px;
+    max-height: 65px;
+    max-width: 250px;
   }
+}
+
+.gallery-no-center {
+  align-items: normal !important; 
 }
 
 .gallery {
@@ -167,6 +174,37 @@
 
   @media screen and (min-width: $bp) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-family: "Alfa Slab One";
+  }
+
+  .img-rel {
+    position: relative;
+  }
+
+  .tag {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: "Alfa Slab One";
+    font-size: 11px;
+    color: $text;
+    padding: 3px 5px;
+    border: 2px solid $text;
+    border-radius: 5px;
+  }
+  .green {
+    background-color: $codebar-green;
+  }
+
+  .pink {
+    background-color: $codebar-pink;
+  }
+
+  .blue {
+    background-color: $codebar-blue;
   }
 
   img {
@@ -183,7 +221,7 @@
     }
 
     img {
-      height: 230px;
+      // height: 230px;
     }
   }
 
@@ -214,6 +252,29 @@
 
     @media screen and (min-width: $bp) {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--four-cols {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+      height: 230px;
+    }
+  }
+
+  &--five-cols {
+
+    @media screen and (min-width: $bp) {
+      grid-template-columns: repeat(5, 1fr);
     }
 
     img {
@@ -274,6 +335,52 @@
   color: #92FFF8;
   font-family: "Alfa Slab One";
 }
+
+ul.faded-stat-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  background:rgba(255,255,255, 0.1);
+  padding: 40px 20px;
+  border-radius: 80px;
+  li {
+    line-height: 20px;
+  }
+}
+
+.global-stat-box {
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+   @media screen and (min-width: $bp) {
+      display: flex;
+    }
+  img {
+    height: 400px;
+  }
+  .stat {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    .single-stat {
+      background:rgba(255,255,255, 0.1);
+      border-radius: 20px;
+      margin: 20px;
+      padding: 20px;
+      font-family: Alfa Slab One;
+      .heading {
+        color: $codebar-pink;
+      }
+      ul {
+        display: inline;
+        color: $pale-red;
+      }
+    }
+  }
+  
+}
+
 
 .box-list {
   list-style: none;
@@ -447,6 +554,18 @@ ul {
   }
 }
 
+.event-list {
+  display: inline;
+  list-style-type: disc;
+  li {
+    font-family: "Alfa Slab One";
+    color: $codebar-green;
+    a {
+      color: $codebar-green;
+    }
+  }
+}
+
 .sponsored-by-box {
   margin-top: 15px;
   display: flex;
@@ -485,15 +604,24 @@ ul {
 .stat-box-pink {
   background-color: $codebar-pink;
   color: #fff;
+  span {
+    font-family: "Alfa Slab One";
+  }
 }
 
 .stat-box-green {
   background-color: $codebar-green;
   color: $text;
+  span {
+    font-family: "Alfa Slab One";
+  }
 }
 
 .stat-box-blue {
   background-color: $codebar-blue;
+  span {
+    font-family: "Alfa Slab One";
+  }
 }
 
 .stat-box-dark-blue {
@@ -502,9 +630,16 @@ ul {
 }
 
 .sponsor-grid {
-  display: flex;
+  display: inline;
   justify-content: space-around;
   align-items: center;
+  width: 70%;
+  margin: 2em auto auto auto;
+
+  @media screen and (min-width: $bp) {
+    display: flex;
+  }
+
   img {
     max-width: 225px;
   }
@@ -518,6 +653,15 @@ ul {
     width: 225px;
     height: 225px;
   }
+}
+
+.highlight {
+  background-color: white;
+  font-family: Alfa Slab One;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 20px;
+  filter: drop-shadow(4px 4px 0px #000);
 }
 
 .white-link {

@@ -34,6 +34,29 @@
   <meta property="og:description" content="In this impact report, we assess how our initiatives have made careers in tech more accessible for minorities all around the world." />
   <meta property="og:url" content="https://impact-report.codebar.io/" />
   <meta property="og:image" content="./assets/social-2025.png" />
+
+  <!-- flodesk newsletter code-->
+  <script>
+    (function(w, d, t, h, s, n) {
+      w.FlodeskObject = n;
+      var fn = function() {
+        (w[n].q = w[n].q || []).push(arguments);
+      };
+      w[n] = w[n] || fn;
+      var f = d.getElementsByTagName(t)[0];
+      var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+      var sm = d.createElement(t);
+      sm.async = true;
+      sm.type = 'module';
+      sm.src = h + s + '.mjs' + v;
+      f.parentNode.insertBefore(sm, f);
+      var sn = d.createElement(t);
+      sn.async = true;
+      sn.noModule = true;
+      sn.src = h + s + '.js' + v;
+      f.parentNode.insertBefore(sn, f);
+    })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+  </script>
 </head>
 
 <body>
@@ -669,6 +692,21 @@
     <div class="sponsored-by-box">
       <p class="medium-text">sponsored by </p><img src="assets/company-logos/pleo.png" alt="Pleo logo" />
     </div>
+
+    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 margin-top-triple" />
+
+    <div class=" ">
+      <div id="fd-form-69dfc93cab2a825e30a189aa"></div>
+      <script>
+        window.fd('form', {
+          formId: '69dfc93cab2a825e30a189aa',
+          containerEl: '#fd-form-69dfc93cab2a825e30a189aa'
+        });
+      </script>
+    </div>
+
+    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+
 
     <ul class="margin-top-triple">
       <li><a href="https://slack.codebar.io"><img src="assets/social-media-icons/slack.svg" alt="join the codebar slack" class="social-media-icon"/></a></li>
